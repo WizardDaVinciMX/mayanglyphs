@@ -1,0 +1,79 @@
+FESTIVAL(1)                                General Commands Manual                                FESTIVAL(1)
+
+NNAAMMEE
+       festival - a text-to-speech system.
+
+SSYYNNOOPPSSIISS
+       ffeessttiivvaall _[_o_p_t_i_o_n_s_] _[_f_i_l_e_0_] _[_f_i_l_e_1_] _._._.
+
+DDEESSCCRRIIPPTTIIOONN
+       Festival  is  a  general purpose text-to-speech system.  As well as simply rendering text as speech it
+       can be used in an interactive command mode for testing and developing various aspects of  speech  syn‐
+       thesis technology.
+
+       Festival has two major modes, command and tts (text-to-speech).  When in command mode input (from file
+       or interactively) is interpreted by the command interpreter.  When in tts mode input  is  rendered  as
+       speech.  When in command mode filenames that start with a left parenthesis are treated as literal com‐
+       mands and evaluated.
+
+OOPPTTIIOONNSS
+       --qq      Load no default setup files
+
+       ----ddaattaaddiirr _<_s_t_r_i_n_g_>
+               Set data directory pathname
+
+       ----lliibbddiirr _<_s_t_r_i_n_g_>
+               Set library directory pathname
+
+       --bb      Run in batch mode (no interaction)
+
+       ----bbaattcchh Run in batch mode (no interaction)
+
+       ----ttttss   Synthesize text in files as speech no files means read from stdin (implies no  interaction  by
+               default)
+
+       --ii      Run in interactive mode (default)
+
+       ----iinntteerraaccttiivvee
+               Run in interactive mode (default)
+
+       ----ppiippee  Run in pipe mode, reading commands from stdin, but no prompt or return values are printed (de‐
+               fault if stdin not a tty)
+
+       ----llaanngguuaaggee _<_s_t_r_i_n_g_>
+               Run in named language, default is english, spanish, russian, welsh and others are available
+
+       ----sseerrvveerr
+               Run in server mode waiting for clients of server_port (1314)
+
+       ----ssccrriipptt
+               <ifile> Used in #! scripts, runs in batch mode on file and passes all other args to Scheme
+
+       ----hheeaapp _<_i_n_t_> {{1100000000000000}}
+               Set size of Lisp heap, should not normally need to be changed from its default
+
+       --vv      Display version number and exit
+
+       ----vveerrssiioonn
+               Display version number and exit
+
+BBUUGGSS
+       More than you can imagine.
+
+       A manual with much detail (though not complete) is available in distributed as part of the system  and
+       is also accessible at
+       http://www.cstr.ed.ac.uk/projects/festival/manual/
+
+       Although  we  cannot guarantee the time required to fix bugs, we would appreciated it if they were re‐
+       ported to
+       festival-bug@cstr.ed.ac.uk
+
+AAUUTTHHOORR
+       Alan W Black, Richard Caley and Paul Taylor
+       (C) Centre for Speech Technology Research, 1996-1998
+       University of Edinburgh
+       80 South Bridge
+       Edinburgh EH1 1HN
+       http://www.cstr.ed.ac.uk/projects/festival.html
+
+                                                 6th Apr 1998                                     FESTIVAL(1)
