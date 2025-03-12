@@ -119,6 +119,13 @@ Syllabary = {
         }
 }
 
+function select(o) {
+  console.log(o);
+  const clone = o.cloneNode(true);
+  canvas = document.getElementById('canvas');
+  canvas.appendChild(clone); //document.getElementById(data));
+}
+
 function drag(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
 }
@@ -127,8 +134,8 @@ function drop(ev) {
 
   ev.preventDefault();
   var data = document.getElementById(ev.dataTransfer.getData("text"));
-  const clone = data.cloneNode(true)
-  canvas = document.getElementById('canvas')
+  const clone = data.cloneNode(true);
+  canvas = document.getElementById('canvas');
   canvas.appendChild(clone); //document.getElementById(data));
 
 }
@@ -187,7 +194,7 @@ function selectSyllable() {
     glyphs = Syllabary[consonant][vowel]
     if(glyphs.length > 0)
         for(i=0;i< glyphs.length;i++)
-            text += '<img src="./images/' + glyphs[i] + '.png" id="' + glyphs[i]  + '" ondragstart="drag(event)"> ';
+            text += '<img src="./images/' + glyphs[i] + '.png" id="' + glyphs[i]  + '" onclick="select(this)" ondragstart="drag(event)"/> ';
     else
             text += 'No existe la sílaba ' + consonant + vowel;
     document.getElementById('glyphs').innerHTML = text;
